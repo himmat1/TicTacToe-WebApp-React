@@ -63,6 +63,8 @@ class Board extends React.Component {
   }
 }
 
+//this is a comment
+
 class Game extends React.Component {
   render() {
     return (
