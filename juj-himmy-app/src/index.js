@@ -29,6 +29,7 @@ class Board extends React.Component {
   constructor(props){
     super(props); 
     this.state = {
+      //this fills the square with 9 elements
       squares: Array(9).fill(null), 
     }; 
   }
@@ -63,7 +64,7 @@ class Board extends React.Component {
   }
 }
 
-//this is a comment
+
 
 class Game extends React.Component {
   render() {
