@@ -36,6 +36,8 @@ function Square(props){
     );
 }
 
+//olo*************checking PR tings
+
 class Board extends React.Component {
   constructor(props){
     super(props); 
