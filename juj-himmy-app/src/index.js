@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 //app importing, replace the root element with this app 
 //how the JS gets put into the HTML via root
+//Final version of the app
+
 
 //DOM- document object module, refers to the actual page
 
