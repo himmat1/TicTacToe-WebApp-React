@@ -30,8 +30,9 @@ import registerServiceWorker from './registerServiceWorker';
 //Functional component of Square: consist of render method, no constructor
 function Square(props){
   return(
-      <button className = "square" onClick = {props.onClick}>
+      <button className = "square" onClick = {props.onClick} >
         {props.value}
+
       </button>
     );
 }
@@ -42,6 +43,7 @@ class Board extends React.Component {
     this.state = {
       //this fills the square with 9 elements
       squares: Array(9).fill(null), 
+      playerOneIsNext: true, 
     }; 
   }
     handleClick(i){
@@ -52,7 +54,10 @@ class Board extends React.Component {
         //3. Determing when to re-render in REact
       const squares = this.state.squares.slice(); 
       squares[i] = 'X'; 
-      this.setState({squares:squares}); 
+      this.setState({
+        squares:squares, 
+        playerOneIsNext: !this.state.playerOneIsNext, 
+      }); 
     }
 
     renderSquare(i) {
@@ -66,7 +71,7 @@ class Board extends React.Component {
 
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: ' + (this.state.playerOneIsNext ? 'X': 'O');
 
     return (
       <div>
@@ -108,6 +113,8 @@ class Game extends React.Component {
     );
   }
 }
+
+
 
 
 // ========================================
